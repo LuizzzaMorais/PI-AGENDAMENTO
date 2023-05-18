@@ -5,17 +5,23 @@
  */
 package view;
 
+import Control.LoginController;
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 182120039
  */
 public class Login extends javax.swing.JFrame {
 
+    private final LoginController controller;
+
     /**
      * Creates new form Login
      */
     public Login() {
         initComponents();
+        controller = new LoginController(this);
     }
 
     /**
@@ -29,6 +35,7 @@ public class Login extends javax.swing.JFrame {
 
         jPasswordField1 = new javax.swing.JPasswordField();
         jTextField1 = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -49,6 +56,14 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 380, 200, 30));
 
+        jButton1.setText("Entrar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 570, 190, -1));
+
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/beauty clinica.png"))); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 997, -1));
@@ -63,6 +78,10 @@ public class Login extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    this.controller.fizTarefa();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -100,8 +119,13 @@ public class Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
+
+    public void exibeMensagem(String mensagem) {
+        JOptionPane.showMessageDialog(null, mensagem);
+    }
 }
