@@ -5,7 +5,10 @@
  */
 package view;
 
+import java.text.ParseException;
+import model.Agendamento;
 import model.Cliente;
+import model.Servico;
 
 /**
  *
@@ -13,10 +16,15 @@ import model.Cliente;
  */
 public class Main {
     
-    public static void main(String[] args){
+    public static void main(String[] args) throws ParseException{
         
         Cliente cliente = new Cliente("teste", "3833744903", 1, "teste");
         System.out.println(cliente.getNome());
+        
+        Servico servico = new Servico(1, "barba", 30);
+        
+        Agendamento agendamento = new Agendamento(1, cliente, servico, 30, "19/05/2023 09:15");
+        System.out.println(agendamento.getCliente().getNome());
     }
     
 }
