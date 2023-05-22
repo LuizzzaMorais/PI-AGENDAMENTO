@@ -16,7 +16,7 @@ public class Usuario extends Pessoa {
     protected String senha;
     protected String nivelAcesso;
 
-    public Usuario(String senha, int id, String nome) {
+    public Usuario(int id, String senha,  String nome) {
         super(id, nome);
         this.senha = senha;
     }
