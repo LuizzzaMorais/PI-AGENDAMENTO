@@ -3,11 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package Control;
+package Controller;
 
 import Control.Helpers.LoginHelper;
-import model.Usuario;
+import Model.DAO.UsuarioDAO;
+import Model.Usuario;
 import view.Login;
+import view.MenuPrincipal;
 
 /**
  *
@@ -26,6 +28,18 @@ public class LoginController {
     public void entrarNoSistema(){
         
         Usuario usuario = helper.obterModelo();
+        
+        UsuarioDAO usuarioDAO = new UsuarioDAO();
+        Usuario usuarioAutenticado = usuarioDAO.selectPorNomeESenha(usuario);
+        
+        if(usuarioAutenticado != null){
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.setVisible(true);
+            this.view.dispose();
+        }else{
+            System.out.println("Usuário ou senha inválidos, tente novamente.");
+            view.exibeMensagem("Usuário ou senha inválidos, tente novamente.");
+        }
     }
     
     public void fizTarefa(){

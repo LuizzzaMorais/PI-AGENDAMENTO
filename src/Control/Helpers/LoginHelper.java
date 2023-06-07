@@ -6,7 +6,7 @@
 package Control.Helpers;
 
 import com.sun.media.sound.ModelOscillator;
-import model.Usuario;
+import Model.Usuario;
 import view.Login;
 
 /**

@@ -6,9 +6,9 @@
 package view;
 
 import java.text.ParseException;
-import model.Agendamento;
-import model.Cliente;
-import model.Servico;
+import Model.Agendamento;
+import Model.Cliente;
+import Model.Servico;
 
 /**
  *

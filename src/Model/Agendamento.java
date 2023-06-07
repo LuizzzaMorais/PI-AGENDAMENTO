@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package Model;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.geometry.Side;
 
 /**
  *
@@ -70,6 +71,14 @@ public class Agendamento {
 
     public Date getData() {
         return data;
+    }
+    
+    public String getDataFormatada(){
+        return new SimpleDateFormat("dd/MM/yyyy").format(data);
+    }
+    
+    public String getHoraFormatada(){
+        return new SimpleDateFormat("HH:mm").format(data);
     }
 
     public void setData(Date data) {

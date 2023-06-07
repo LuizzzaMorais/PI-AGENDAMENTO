@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package model;
+package Model;
 
 import java.util.Date;
 
@@ -16,7 +16,7 @@ public class Cliente extends Pessoa {
     private String endereco;
     private String cep;
 
-    public Cliente(String endereco, String cep, int id, String nome, char sexo, String dataNascimento, String telefone, String email, String cpf) {
+    public Cliente(int id,String nome,char sexo, String dataNascimento,String telefone,String email,String cpf,String endereco, String cep) {
         super(id, nome, sexo, dataNascimento, telefone, email, cpf);
         this.endereco = endereco;
         this.cep = cep;
