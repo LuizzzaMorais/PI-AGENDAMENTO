@@ -5,6 +5,9 @@
  */
 package Controller;
 
+import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import view.Agenda;
 import view.MenuPrincipal;
 
@@ -26,8 +29,12 @@ public class MenuPrincipalController {
     
     public void navegarParaAgenda(){
         
-        Agenda agenda = new Agenda();
-        agenda.setVisible(true);
+        try {
+            Agenda agenda = new Agenda();
+            agenda.setVisible(true);
+        } catch (ParseException ex) {
+            Logger.getLogger(MenuPrincipalController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
 }

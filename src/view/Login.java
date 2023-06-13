@@ -8,6 +8,8 @@ package view;
 import Controller.LoginController;
 import Model.DAO.Banco;
 import java.text.ParseException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
@@ -60,13 +62,15 @@ public class Login extends javax.swing.JFrame {
         });
         getContentPane().add(txtUser, new org.netbeans.lib.awtextra.AbsoluteConstraints(399, 380, 200, 30));
 
-        btEntrar.setText("Entrar");
+        btEntrar.setFont(new java.awt.Font("Microsoft Himalaya", 1, 24)); // NOI18N
+        btEntrar.setForeground(new java.awt.Color(51, 0, 102));
+        btEntrar.setText("ENTRAR");
         btEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btEntrarActionPerformed(evt);
             }
         });
-        getContentPane().add(btEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 570, 190, -1));
+        getContentPane().add(btEntrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 570, 190, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/beauty clinica.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -118,7 +122,11 @@ public class Login extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Login().setVisible(true);
+                try {
+                    new Login().setVisible(true);
+                } catch (ParseException ex) {
+                    Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+                }
             }
         });
     }

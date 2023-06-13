@@ -12,6 +12,10 @@ import java.util.ArrayList;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.table.DefaultTableModel;
 import view.Agenda;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -80,7 +84,6 @@ public class AgendaHelper implements IHelper {
         String hora = view.getTextHora().getText();
         String dataHora = data + " " + hora;
         String observacao = view.getjTextArea1().getText();
-        
         Agendamento agendamento = new Agendamento(id, cliente, servico, valor, dataHora, observacao);
         return agendamento;
     }

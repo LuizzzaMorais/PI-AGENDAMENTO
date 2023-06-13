@@ -34,7 +34,7 @@ public class Banco {
         
         //criando elementos
         
-        Usuario usuario1 = new Usuario(1, "barbeiro", 'M', "09/05/1996", "30212121", "barbeiro@barbershop.com", "521454123", "barbeiro", "administrador");
+        Usuario usuario1 = new Usuario(1, "luiza.morais", 'M', "09/05/1996", "30212121", "barbeiro@barbershop.com", "521454123", "luiza", "administrador");
         Usuario usuario2 = new Usuario(2, "estagiario", 'M', "09/05/1996", "30212122", "estagiario@barbershop.com", "451244123", "estagiario", "funcionario");
          
         Cliente cliente1 = new Cliente(1, "Alan Figueiredo", 'M', "30/01/1995", "30212126", "tiagoluz.h607@gmail.com", "5142487", "Rua jaboti 35 Canudos NH",  "93300012");
@@ -48,12 +48,12 @@ public class Banco {
         Cliente cliente9 = new Cliente(9, "Samuel Coltinho", 'M', "09/02/1998", "302121189", "samuelcoltinhopet@gmail.com", "74595142487", "Rua floresta 12 Canudos NH",  "9330046364");
         Cliente cliente10 = new Cliente(10, "Felipe Luis", 'M', "12/06/1999", "3021212478", "felipeluispet@gmail.com", "845713647", "Rua marechal 1023 Canudos NH",  "933000874");
         
-        Servico servico1 = new Servico(1, "Corte Simples", 18);
-        Servico servico2 = new Servico(2, "Corte Degrade", 30);
-        Servico servico3 = new Servico(3, "Barba Simples", 15);
-        Servico servico4 = new Servico(4, "Barba Desenhada", 25);
-        Servico servico5 = new Servico(5, "Sombrancelhas", 10);
-        Servico servico6 = new Servico(6, "Penteados", 3);
+        Servico servico1 = new Servico(1, "Limpeza de Pele", 85);
+        Servico servico2 = new Servico(2, "Tratamento Capilar", 130);
+        Servico servico3 = new Servico(3, "Brow Lamination", 70);
+        Servico servico4 = new Servico(4, "Lash Lifiting", 55);
+        Servico servico5 = new Servico(5, "Design de Sobrancelhas", 40);
+        Servico servico6 = new Servico(6, "Esfoliação Facial", 40);
 
         Agendamento agendamento1 = new Agendamento(1, cliente1, servico2, 30, "14/07/2018 09:30");
         Agendamento agendamento2 = new Agendamento(2, cliente3, servico4, 40, "14/07/2018 10:00");

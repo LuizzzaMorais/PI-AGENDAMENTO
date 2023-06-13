@@ -25,7 +25,7 @@ public class Agendamento {
     private Date data;
     private String observacao;
 
-    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) throws ParseException {
+    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data) {
         this.id = id;
         this.cliente = cliente;
         this.servico = servico;
@@ -37,7 +37,7 @@ public class Agendamento {
         }
     }
 
-    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String observacao) throws ParseException {
+    public Agendamento(int id, Cliente cliente, Servico servico, float valor, String data, String observacao) {
         this(id,cliente,servico,valor,data);
         this.observacao = observacao;
     }
